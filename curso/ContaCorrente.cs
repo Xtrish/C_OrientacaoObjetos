@@ -4,7 +4,8 @@
     {
         public string titular;
         public string conta;
-        public string agencia;
+        public int codigo_agencia;
+        public string nome_agencia;
         public double saldo;
     }
 }
