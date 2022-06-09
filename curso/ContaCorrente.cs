@@ -9,10 +9,7 @@ namespace bytebank
         public int numero_agencia;
         public string nome_agencia;
         public double saldo;
-<<<<<<< Updated upstream
-
-=======
         public bool verificador;
->>>>>>> Stashed changes
+
     }
 }

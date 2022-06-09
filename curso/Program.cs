@@ -16,19 +16,21 @@ conta2.numero_agencia = 321;
 conta2.nome_agencia = "Agência Central";
 conta2.saldo = 100;
 
-<<<<<<< Updated upstream
+
 conta1 = conta2;
 
 Console.WriteLine(conta1==conta2);
-=======
+Console.WriteLine("------------------------");
+
 ContaCorrente conta3 = new ContaCorrente();
 
-//Console.WriteLine("Titular :"+conta1.titular);
-//Console.WriteLine("Conta :" + conta1.conta);
-//Console.WriteLine("Número Agência :" + conta1.numero_agencia);
-//Console.WriteLine("Nome Agência :" + conta1.nome_agencia);
-//Console.WriteLine("Saldo: "+conta1.saldo);
+Console.WriteLine("Titular :" + conta1.titular);
+Console.WriteLine("Conta :" + conta1.conta);
+Console.WriteLine("Número Agência :" + conta1.numero_agencia);
+Console.WriteLine("Nome Agência :" + conta1.nome_agencia);
+Console.WriteLine("Saldo: " + conta1.saldo);
 
+Console.WriteLine("-------------------------------------");
 Console.WriteLine("Titular :" + conta3.titular);
 Console.WriteLine("Conta :" + conta3.conta);
 Console.WriteLine("Número Agência :" + conta3.numero_agencia);
@@ -45,4 +47,4 @@ Console.WriteLine($"Agência: {conta.nome_agencia}");
 Console.WriteLine($"Saldo R$ {String.Format("{0:0.00}", conta.saldo)}");
 
 Console.ReadKey();
->>>>>>> Stashed changes
+
