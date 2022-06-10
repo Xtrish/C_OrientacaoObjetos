@@ -1,12 +1,16 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace bytebank
 {
     public class Cliente
     {
-
-        public string cpf;
         public string nome;
-        public string profissao;
-     
+        public string titular_cpf;
+        public string titular_profissao;
+
     }
 }
