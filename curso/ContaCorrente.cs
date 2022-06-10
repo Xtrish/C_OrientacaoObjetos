@@ -9,6 +9,8 @@ namespace bytebank
         public int numero_agencia;
         public string nome_agencia;
         public double saldo;
+        public bool verificador;
+
 
         public bool Sacar(double valor)
         {
@@ -26,16 +28,10 @@ namespace bytebank
                 return true;
             }
         }
-
         public void Depositar(double valor)
         {
-            if (valor < 0)
-            {
-                return;
-            }
             saldo = saldo + valor;
         }
-
         public bool Transferir(double valor, ContaCorrente destino)
         {
             if (saldo < valor)
@@ -53,6 +49,15 @@ namespace bytebank
                 return true;
             }
         }
-
+        public void ExibirDadosDaConta()
+        {
+            Console.WriteLine("*************************************");
+            Console.WriteLine("Titular: " + titular);
+            Console.WriteLine("Conta:" + conta);
+            Console.WriteLine("Número Agência :" + numero_agencia);
+            Console.WriteLine("Nome Agência:" + nome_agencia);
+            Console.WriteLine("Saldo: " + saldo);
+            Console.WriteLine("*************************************");
+        }
     }
 }
