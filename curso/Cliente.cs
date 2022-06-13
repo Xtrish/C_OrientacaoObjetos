@@ -8,9 +8,9 @@ namespace bytebank.Titular
 {
     public class Cliente
     {
-        public string nome;
-        public string titular_cpf;
-        public string titular_profissao;
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Profissao { get; set; }
 
     }
 }

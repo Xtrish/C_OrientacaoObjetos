@@ -6,12 +6,25 @@ namespace bytebank
     public class ContaCorrente
     {
 
-        public Cliente titular;
+        public Cliente Titular
+        {
+            get; set;
+        }
 
-        public string conta;
-        public int numero_agencia;
-        public string nome_agencia;
-        public double saldo;
+        public string Conta
+        {
+            get; set;
+        }
+        public int Numero_agencia
+        {
+            get; set;
+        }
+        public string Nome_agencia
+        {
+            get; set;
+        }
+
+        private double saldo;
 
 
         public bool Sacar(double valor)
@@ -41,7 +54,7 @@ namespace bytebank
         }
 
 
-     
+
 
         public bool Transferir(double valor, ContaCorrente destino)
         {
@@ -72,5 +85,37 @@ namespace bytebank
             Console.WriteLine("*************************************");
         }
 
+
+        //public void SetSaldo(double valor)
+        //{
+        //    if (valor < 0)
+        //    {
+        //        return;
+        //    }
+        //    saldo = saldo+valor;
+        //}
+        //public double GetSaldo()
+        //{
+        //    return saldo;
+        //}
+
+        public double Saldo
+        {
+            get
+            {
+                return saldo;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    saldo = value;
+                }
+            }
+        }
     }
 }
