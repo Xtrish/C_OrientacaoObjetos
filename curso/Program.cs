@@ -1,5 +1,5 @@
 ﻿using bytebank;
-
+using bytebank.Titular;
 
 Console.WriteLine("Boas Vindas ao seu banco, ByteBank!\n");
 //ContaCorrente conta1 = new ContaCorrente();
@@ -42,6 +42,41 @@ Console.WriteLine("Boas Vindas ao seu banco, ByteBank!\n");
 //contaAndre.Saldo = 100;
 
 //Console.WriteLine("Total de clientes: " + Cliente.TotalClientesCadastrados);
+
+Cliente sarah = new Cliente();
+sarah.Nome = "Sara Andrade";
+
+ContaCorrente conta4 = new ContaCorrente(235,"123456-y");
+conta4.Saldo = -100;
+conta4.Titular = sarah;
+Console.WriteLine(conta4.Titular.Nome);
+Console.WriteLine("Salto: " + conta4.Saldo);
+Console.WriteLine("Agencia: "+conta4.Numero_agencia);
+Console.WriteLine("Numero Conta: "+conta4.Conta);
+
+ContaCorrente conta5 = new ContaCorrente(235, "123456-y");
+
+ContaCorrente conta6 = new ContaCorrente(365, "897798798-y");
+
+Console.WriteLine(ContaCorrente.TotalDeContasCriadas) ;
+
+Cliente ester = new Cliente();
+ester.Nome = "Ester Almeida";
+ester.Profissao = "Advogada";
+ester.Cpf = "868524125-32";
+
+Console.WriteLine("Total de clientes: " + Cliente.TotalClientesCadastrados);
+
+ContaCorrente contaAndre = new ContaCorrente(159, "152869-x");
+contaAndre.Titular = new Cliente();
+contaAndre.Titular.Nome = " André Pereira";
+contaAndre.Titular.Profissao = "Auxiliar Administrativo";
+contaAndre.Saldo = 100;
+
+Console.WriteLine("Total de clientes: " + Cliente.TotalClientesCadastrados);
+
+
+
 
 Console.ReadKey();
 
