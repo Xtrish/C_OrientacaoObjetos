@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 ﻿using bytebank;
 using bytebank.Titular;
+=======
+﻿using bytebank.Titular;
+>>>>>>> 5410cfa81756d32877723bfa21a07ebf2a7b3c07
 
 namespace bytebank
 {
     public class ContaCorrente
     {
 
+<<<<<<< HEAD
         public Cliente Titular
         {
             get; set;
@@ -14,6 +19,42 @@ namespace bytebank
         public string Conta
         {
             get; set;
+=======
+        public Cliente Titular { get; set; }
+        public string Nome_Agencia { get; set; }
+        public int Numero_agencia
+        {
+            get;
+
+            set;
+            
+
+        }
+        public string Conta
+        {
+            get;
+            set;
+        }
+
+        private double saldo;
+        public double Saldo
+        {
+            get
+            {
+                return saldo;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    saldo = value;
+                }
+            }
+>>>>>>> 5410cfa81756d32877723bfa21a07ebf2a7b3c07
         }
         public int Numero_agencia
         {
@@ -45,7 +86,10 @@ namespace bytebank
         }
         public void Depositar(double valor)
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5410cfa81756d32877723bfa21a07ebf2a7b3c07
             if (valor < 0)
             {
                 return;
@@ -53,9 +97,12 @@ namespace bytebank
             saldo = saldo + valor;
         }
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 5410cfa81756d32877723bfa21a07ebf2a7b3c07
         public bool Transferir(double valor, ContaCorrente destino)
         {
             if (saldo < valor)
@@ -74,6 +121,7 @@ namespace bytebank
             }
         }
 
+<<<<<<< HEAD
         public void ExibirDadosDaConta()
         {
             Console.WriteLine("*************************************");
@@ -117,5 +165,8 @@ namespace bytebank
                 }
             }
         }
+=======
+       
+>>>>>>> 5410cfa81756d32877723bfa21a07ebf2a7b3c07
     }
 }
